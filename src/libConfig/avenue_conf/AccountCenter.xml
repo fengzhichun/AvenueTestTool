@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<service  name="AccountCenter" id="15">
+	<type name="categoryId_type" class="int" code="1"/>
+	<type name="sndaId_type" class="string" code="2"/>
+	<type name="sndaId_Array_type" class="array" itemType="sndaId_type"/>
+	
+	<type name="key_type" class="int" code="3"/>
+	<type name="key_Array_type" class="array" itemType="key_type"/>
+	
+	<type name="value_type" class="string" code="4"/>
+	
+	<type name="sndaIdKeyValue_type" class="struct" code="6">
+		<field name="sndaId" type="string" len="24"/>
+		<field name="key" type="int" />
+		<field name="value" type="string"/>
+	</type>
+	<type name="sndaIdKeyValue_Array_type" class="array" itemType="sndaIdKeyValue_type"/>
+	
+	<type name="keyValue_type" class="struct" code="7">
+		<field name="key" type="int" />
+		<field name="value" type="string"/>
+	</type>
+	<type name="keyValue_Array_type" class="array" itemType="keyValue_type"/>
+	<type name="keyValue_type_new" class="struct" code="10">
+		<field name="key" type="int" />
+		<field name="value" type="string"/>
+	</type>
+	<!--5/8/9/10 reserve, please don't use-->
+	
+
+	<message name="queryUserInfo" id="1">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_type"  />
+			<field name="key" type="key_Array_type"  />
+		</requestParameter>
+		
+		<responseParameter>
+			<field name="keyValue" type="keyValue_Array_type" />
+		</responseParameter>
+	</message>
+
+	<message name="queryBatchUserInfo" id="2">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_Array_type" />
+			<field name="key" type="key_Array_type"  />
+		</requestParameter>
+		
+		<responseParameter>
+			<field name="sndaIdKeyValue" type="sndaIdKeyValue_Array_type" />
+		</responseParameter>
+	</message>
+	
+	<message name="updateUserInfo" id="3">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_type"  />
+			<field name="keyValue" type="keyValue_type"  />
+		</requestParameter>
+		
+		<responseParameter>
+		</responseParameter>
+	</message>
+	
+	<message name="deleteUserInfo" id="4">
+		<requestParameter>	
+			<field name="sndaId" type="sndaId_type" />
+			<field name="key" type="key_type"  />
+		</requestParameter>
+		
+		<responseParameter>
+		</responseParameter>
+	</message>
+	
+	<message name="querySndaId" id="5">
+		<requestParameter>
+			<field name="keyValue" type="keyValue_type"  />
+		</requestParameter>
+		
+		<responseParameter>
+			<field name="sndaId" type="sndaId_Array_type" />
+		</responseParameter>
+	</message>
+	<message name="InsertSndaId" id="9">
+		<requestParameter>
+			<field name="keyValue" type="keyValue_type"  />
+		</requestParameter>
+		
+		<responseParameter>
+			<field name="sndaId" type="sndaId_type" />
+		</responseParameter>
+	</message>
+	<message name="QueryByAccount" id="10">
+		<requestParameter>
+			<field name="keyValue" type="keyValue_type"  />
+			<field name="key" type="key_Array_type"  />
+		</requestParameter>
+		
+		<responseParameter>
+			<field name="keyValue" type="keyValue_Array_type" />
+			<field name="sndaId" type="sndaId_type" />
+		</responseParameter>
+	</message>
+	<message name="UpdateByAccount" id="11">
+		<requestParameter>
+			<field name="keyValue" type="keyValue_type"  />
+			<field name="newKeyValue" type="keyValue_type_new"  />
+		</requestParameter>
+		
+		<responseParameter>
+		</responseParameter>
+	</message>
+	
+	<message name="DeleteByAccount" id="12">
+		<requestParameter>
+			<field name="keyValue" type="keyValue_type"  />
+			<field name="key" type="key_type"  />
+		</requestParameter>
+		
+		<responseParameter>
+		</responseParameter>
+	</message>
+	<message name="UpdateOldAccount" id="15">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_type"  />
+			<field name="keyValue" type="keyValue_type"  />
+		</requestParameter>
+		
+		<responseParameter>
+		</responseParameter>
+	</message>
+	<message name="InsertOldAccount" id="16">
+		<requestParameter>
+			<field name="keyValue" type="keyValue_type"  />
+		</requestParameter>
+		
+		<responseParameter>
+			<field name="sndaId" type="sndaId_type" />
+		</responseParameter>
+	</message>
+</service>

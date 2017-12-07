@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<parameters>
+
+	<SosList>
+		<ServiceId>59403</ServiceId>
+		<ServerAddr>10.152.21.136:8540</ServerAddr>
+	</SosList>
+	
+	<SosList>
+		<ServiceId>480,56001</ServiceId>
+		<ServerAddr>10.152.21.17:8090</ServerAddr>
+	</SosList>
+	
+</parameters>

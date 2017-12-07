@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service  name="GmmConfig" id="59403" IsTreeStruct ="false">
+
+    <type name="gmmWeb_type"  			code="20010" 	class="string" />
+    <type name="cookiememkey_type"  	code="20011" 	class="string" />
+    <type name="headermemkey_type"  	code="20012" 	class="string" />
+    
+	<type name="retCode_type"  		code="10001" 	class="int" />
+    <type name="retMsg_type"  		code="10002" 	class="string" />
+    <type name="src_code_type"  		code="1" 	class="int" />
+    <type name="phone_type"  				code="2" 	class="string" />
+    <type name="type_type"  		code="3" 	class="string" />
+    <type name="smsno_type"  		code="4" 	class="string" />
+    <type name="sms_type"  		code="5" 	class="string" />
+    <type name="account_type"  		code="6" 	class="string" />
+    <type name="valid_code_type"  		code="7" 	class="string" />
+    <type name="fail_reason_type"  		code="8" 	class="string" />
+    <type name="client_ip_type"  		code="9" 	class="string" />
+    <type name="sessionId_type"  		code="10" 	class="string" />
+	<type name="sdpt_type" class="string" code="11" />
+    <type name="showname_type" class="string" code="12" />
+    <type name="bind_time_type" class="int" code="13" />
+	<type name="sdid_type" class="string" code="14" />    
+	<type name="key_type" class="string" code="15" />
+	<type name="state_type" class="int" code="16" />
+	<type name="game_id_type" class="int" code="17" />
+	<type name="area_id_type" class="int" code="18" />
+	<type name="group_id_type" class="int" code="19" />
+	<type name="order_type" class="string" code="20" />
+	<type name="order_type_type" class="string" code="21" />
+	<type name="price_low_type" class="int" code="22" />
+	<type name="price_high_type" class="int" code="23" />
+	<type name="level_low_type" class="int" code="24" />
+	<type name="level_high_type" class="int" code="25" />
+	<type name="product_type_type" class="int" code="26" />
+	<type name="special_flag_type" class="int" code="27" />
+	<type name="job_type" class="string" code="28" />
+	<type name="image_num_type" class="int" code="29" />
+	<type name="complete_low_type" class="int" code="30" />
+	<type name="complete_high_type" class="int" code="31" />
+	<type name="page_type" class="int" code="32" />
+	<type name="count_type" class="int" code="33" />
+	<type name="sum_type" class="int" code="34" />
+	<type name="check_type_type" class="int" code="36" />
+	<type name="trade_mode_type" class="int" code="38" />
+	<type name="goods_types_type" class="string" code="39" />
+	
+	<type name="keywordquery_type" class="struct" code="40">
+		<field name="book_id"         type="systemstring" />
+		<field name="s_book_id"         type="systemstring" />
+		<field name="goods_type"         type="int" />
+		<field name="trade_mode"         type="int" />
+		<field name="game_id"         type="int" />
+		<field name="area_id"         type="int" />
+		<field name="group_id"         type="int" />
+		<field name="game_name"         type="systemstring" />
+		<field name="area_name"         type="systemstring" />
+		<field name="group_name"         type="systemstring" />
+		<field name="sdid"         type="systemstring" />
+		<field name="sdpt"         type="systemstring" />
+		<field name="p_special_flag"         type="int" />
+		<field name="p_job"         type="int" />
+		<field name="p_sex"			type="int"/>
+		<field name="p_role_name"		type="systemstring" />
+		<field name="p_level"         type="int" />
+		<field name="p_name"         type="systemstring" />
+		<field name="p_tips"         type="systemstring" />
+		<field name="p_account"         type="systemstring" />
+		<field name="p_pw"         type="systemstring" />
+		<field name="p_sdpt"         type="systemstring" />
+		<field name="p_sdid"         type="systemstring" />
+		<field name="b_amount"         type="systemstring" />
+		<field name="price"         type="systemstring" />
+		<field name="b_qty"         type="int" />
+		<field name="ttl_bag_qty"         type="int" />
+		<field name="sold_bag_qty"         type="int" />
+		<field name="invt_bag_qty"         type="int" />
+		<field name="view_bag_qty"         type="int" />
+		<field name="state"         type="int" />
+		<field name="public_period"         type="int" />
+		<field name="src_code"         type="int" />
+		<field name="sp_id"         type="systemstring" />
+		<field name="create_time"         type="systemstring" />
+		<field name="update_time"         type="systemstring" />
+		<field name="u_save_time"         type="int" />
+		<field name="modify_time"         type="systemstring" />
+		<field name="p_complete"         type="int" />
+		<field name="p_img_count"         type="int" />
+		<field name="onsell_period"         type="int" />
+		<field name="view_cnt"         type="int" />
+		<field name="memo"         type="systemstring" />
+		<field name="favorite_cnt"         type="int" />
+		<field name="comment_cnt"         type="int" />
+		<field name="ext1"         type="systemstring" />
+		<field name="thumbnail"         type="systemstring" />
+	</type>
+	<type name="keywordquery_array_type" class="array" itemType="keywordquery_type"/>
+	
+	<type name="ext_phone_type" class="string" code="41" />
+	<type name="b_uid_type" class="int" code="42" />
+	<type name="req_from_type" class="int" code="43"/>
+	<type name="smsid_type" class="string" code="44" />
+	<type name="validType_type" class="int" code="45" />
+    <type name="validValue_type" class="string" code="46" />
+	
+	<type name="realuserinfo_type" class="struct" code="47">
+		<field name="sdid"         type="systemstring" />
+		<field name="sdpt"         type="systemstring" />
+		<field name="show_name"         type="systemstring" />
+		<field name="state"         type="int" />
+		<field name="book_id"         type="systemstring" />
+		<field name="dianquan_balance"   type="int" />
+		<field name="dianquan_name"      type="systemstring" />
+	</type>
+	<type name="realuserinfo_array_type" class="array" itemType="realuserinfo_type"/>
+	
+	<type name="book_id_type" class="string" code="48" />
+	<type name="id_type" class="int" code="49" />
+	<type name="url_type" class="string" code="50" />	
+	<type name="small_url_type" class="string" code="51" />	
+	<type name="FilePath_type" class="string" code="52" />	
+	<type name="ContentType_type" class="string" code="53" />	
+	<type name="TransferEncoding_type" class="string" code="54" />	
+	<type name="ptid_type" class="string" code="56" />
+	<type name="isBindWallet_type" class="int" code="57"/>
+	<type name="currency_id_type" class="int" code="220" />
+	<type name="needVerifySmsFlag_type" class="int" code="880" />
+	<type name="app_version_type"  		code="881" 	class="string" />
+	
+	<message name="QuerySmsno" id="1" uri="/api/miscapi/config/QuerySmsno">
+        <requestParameter>        
+            <field name="src_code" 			type="src_code_type" 		 />
+            <field name="phone" 		type="phone_type" 	 />
+            <field name="type" 		type="type_type" 	 />
+        </requestParameter>		
+        <responseParameter>
+			<field name="bpeCode" 			type="retCode_type"/>
+			<field name="bpeMsg" 			type="retMsg_type"/>
+			<field name="smsno"   			type="smsno_type"  />
+			<field name="sms"   	type="sms_type"  />  
+        </responseParameter>
+    </message>
+	
+	<message name="Verifyonshelf" id="2" uri="/api/accountapi/verifyonshelf">
+        <requestParameter>        
+            <field name="src_code" 			type="src_code_type" 		 />
+            <field name="phone" 		type="phone_type" 	 />
+            <field name="account" 		type="account_type" 	 />
+            <field name="valid_code" 		type="valid_code_type" 	 />
+			<field name="client_ip" 			type="client_ip_type"   get="GetClientIp()"  />
+			<field name="sessionId"				type="sessionId_type" 	get="GetFromCookie(PHPSESSID)" />
+			<field name="sdpt" 		type="sdpt_type" 	 />
+            <field name="gmmWeb" 			type="gmmWeb_type" 			 />
+			<field name="cookiememkey"    	type="cookiememkey_type"      	get="GetFromCookie(gmmWeb)"  />
+			<field name="headermemkey"     	type="headermemkey_type"       	get="GetFromHeader(gmmWeb)"  />
+        </requestParameter>		
+        <responseParameter>
+			<field name="bpeCode" 			type="retCode_type"/>
+			<field name="bpeMsg" 			type="retMsg_type"/>
+			<field name="fail_reason"   			type="fail_reason_type"  />
+			<field name="sdid" type="sdid_type" />
+			<field name="sdpt" type="sdpt_type" />
+			<field name="phone" type="phone_type" />
+			<field name="show_name" type="showname_type" />
+			<field name="bind_time" type="bind_time_type" />
+        </responseParameter>
+    </message>
+
+	<message name="GoodsQuery" id="3" uri="/api/query/GoodsQuery">
+        <requestParameter>        
+            <field name="src_code" type="src_code_type" />
+			<field name="key" type="key_type" />
+			<field name="state" type="state_type" />
+			<field name="game_id" type="game_id_type" />
+			<field name="area_id" type="area_id_type" />
+			<field name="group_id" type="group_id_type" />
+			<field name="order" type="order_type" />
+			<field name="order_type" type="order_type_type" />
+			<field name="price_low" type="price_low_type" />
+			<field name="price_high" type="price_high_type" />
+			<field name="level_low" type="level_low_type" />
+			<field name="level_high" type="level_high_type" />
+			<field name="product_type" type="product_type_type" />
+			<field name="special_flag" type="special_flag_type" />
+			<field name="job" type="job_type" />
+			<field name="image_num" type="image_num_type" />
+			<field name="complete_low" type="complete_low_type" />
+			<field name="complete_high" type="complete_high_type" />
+			<field name="page" type="page_type" />
+			<field name="count" type="count_type" />
+			<field name="check_type" type="check_type_type" />
+			<field name="trade_mode" type="trade_mode_type" />
+			<field name="goods_types" type="goods_types_type" />
+        </requestParameter>		
+        <responseParameter>
+			<field name="bpeCode" 			type="retCode_type"/>
+			<field name="bpeMsg" 			type="retMsg_type"/>
+			<field name="fail_reason"   			type="fail_reason_type"  />
+			<field name="list" type="keywordquery_array_type" />
+			<field name="sum" type="sum_type" />
+        </responseParameter>
+    </message>
+	
+	<message name="Phone" id="4" uri="/api/accountapi/phone">
+        <requestParameter>        
+            <field name="sessionId"				type="sessionId_type" 	get="GetFromCookie(PHPSESSID)" />
+            <field name="gmmWeb" 			type="gmmWeb_type" 			 />
+			<field name="cookiememkey"    	type="cookiememkey_type"      	get="GetFromCookie(gmmWeb)"  />
+			<field name="headermemkey"     	type="headermemkey_type"       	get="GetFromHeader(gmmWeb)"  />
+            <field name="client_ip" 			type="client_ip_type"   get="GetClientIp()"  />
+        </requestParameter>		
+        <responseParameter>
+			<field name="bpeCode" 			type="retCode_type"/>
+			<field name="bpeMsg" 			type="retMsg_type"/>
+			<field name="ext_phone"   			type="ext_phone_type"  />
+			<field name="phone"   	type="phone_type"  />  
+			<field name="b_uid"   	type="b_uid_type"  />  
+        </responseParameter>
+    </message>
+	
+	<message name="DealVerifySms" id="5" uri="api/accountapi/hps/DealVerifySms">
+        <requestParameter>    
+			<field name="req_from" type="req_from_type" />
+			<field name="sessionId"				type="sessionId_type" 	get="GetFromCookie(PHPSESSID)" />
+			<field name="client_ip" 			type="client_ip_type"   get="GetClientIp()"  />
+			<field name="valid_code" 		type="valid_code_type" 	 />
+			<field name="validType" type="validType_type" />
+            <field name="gmmWeb" 			type="gmmWeb_type" 			 />
+			<field name="cookiememkey"    	type="cookiememkey_type"      	get="GetFromCookie(gmmWeb)"  />
+			<field name="headermemkey"     	type="headermemkey_type"       	get="GetFromHeader(gmmWeb)"  />
+        </requestParameter>		
+        <responseParameter>
+			<field name="bpeCode" 			type="retCode_type"/>
+			<field name="bpeMsg" 			type="retMsg_type"/>
+			<field name="fail_reason"   			type="fail_reason_type"  />
+        </responseParameter>
+    </message>
+	
+	<message name="NeedSendVerifyReq" id="6" uri="api/accountapi/hps/NeedSendVerifyReq">
+        <requestParameter>        
+            <field name="req_from" type="req_from_type" />
+			<field name="sessionId"				type="sessionId_type" 	get="GetFromCookie(PHPSESSID)" />
+            <field name="validValue" type="validValue_type" />
+            <field name="validType" type="validType_type" />
+            <field name="smsid" type="smsid_type" />
+            <field name="gmmWeb" 			type="gmmWeb_type" 			 />
+			<field name="cookiememkey"    	type="cookiememkey_type"      	get="GetFromCookie(gmmWeb)"  />
+			<field name="headermemkey"     	type="headermemkey_type"       	get="GetFromHeader(gmmWeb)"  />
+            <field name="client_ip" 			type="client_ip_type"   get="GetClientIp()"  />
+        </requestParameter>		
+        <responseParameter>
+			<field name="bpeCode" 			type="retCode_type"/>
+			<field name="bpeMsg" 			type="retMsg_type"/>
+			<field name="fail_reason"   			type="fail_reason_type"  />
+        </responseParameter>
+    </message>
+	
+	<message name="SendVerifySms" id="7" uri="api/accountapi/hps/SendVerifySms">
+        <requestParameter>
+			<field name="req_from"  type="req_from_type" />
+			<field name="sessionId"				type="sessionId_type" 	get="GetFromCookie(PHPSESSID)" />
+			<field name="client_ip" 			type="client_ip_type"   get="GetClientIp()"  />
+            <field name="phone" 		type="phone_type" 	 />
+			<field name="validType" type="validType_type" />
+            <field name="gmmWeb" 			type="gmmWeb_type" 			 />
+			<field name="cookiememkey"    	type="cookiememkey_type"      	get="GetFromCookie(gmmWeb)"  />
+			<field name="headermemkey"     	type="headermemkey_type"       	get="GetFromHeader(gmmWeb)"  />
+        </requestParameter>		
+        <responseParameter>
+			<field name="bpeCode" 			type="retCode_type"/>
+			<field name="bpeMsg" 			type="retMsg_type"/>
+			<field name="fail_reason"   			type="fail_reason_type"  />
+        </responseParameter>
+    </message>
+	
+	<message name="RealUserInfo" id="8" uri="api/accountapi/hps/RealUserInfo">
+        <requestParameter>   
+			<field name="req_from"  type="req_from_type" />
+			<field name="sessionId"				type="sessionId_type" 	get="GetFromCookie(PHPSESSID)" />
+			<field name="game_id" 	type="game_id_type" />
+            <field name="gmmWeb" 			type="gmmWeb_type" 			 />
+			<field name="cookiememkey"    	type="cookiememkey_type"      	get="GetFromCookie(gmmWeb)"  />
+			<field name="headermemkey"     	type="headermemkey_type"       	get="GetFromHeader(gmmWeb)"  />
+            <field name="client_ip" 			type="client_ip_type"   get="GetClientIp()"  />
+			<field name="currency_id" 	type="currency_id_type" />
+        </requestParameter>		
+        <responseParameter>
+			<field name="bpeCode" 			type="retCode_type"/>
+			<field name="bpeMsg" 			type="retMsg_type"/>
+			<field name="fail_reason"   			type="fail_reason_type"  />
+			<field name="asdata"   			type="realuserinfo_array_type"  />
+        </responseParameter>
+    </message>
+	
+	<message name="Doupload" id="9" uri="api/accountapi/doupload">
+        <requestParameter>   
+			<field name="sessionId"				type="sessionId_type" 	get="GetFromCookie(PHPSESSID)" />
+			<field name="book_id" 	type="book_id_type" />
+			<field name="FilePath" 	type="FilePath_type" />
+			<field name="ContentType" 	type="ContentType_type" />
+			<field name="TransferEncoding" 	type="TransferEncoding_type" />
+            <field name="gmmWeb" 			type="gmmWeb_type" 			 />
+			<field name="cookiememkey"    	type="cookiememkey_type"      	get="GetFromCookie(gmmWeb)"  />
+			<field name="headermemkey"     	type="headermemkey_type"       	get="GetFromHeader(gmmWeb)"  />
+            <field name="client_ip" 			type="client_ip_type"   get="GetClientIp()"  />
+        </requestParameter>		
+        <responseParameter>
+			<field name="bpeCode" 			type="retCode_type"/>
+			<field name="bpeMsg" 			type="retMsg_type"/>
+			<field name="fail_reason"   			type="fail_reason_type"  />
+			<field name="id" type="id_type" />  			
+			<field name="url" type="url_type" />  	
+			<field name="small_url" type="small_url_type" />  
+        </responseParameter>
+    </message>
+	
+	<message name="SdpWalletStatusQuery" id="10" uri="api/accountapi/hps/SdpWalletStatusQuery">
+        <requestParameter>   
+			<field name="req_from"  type="req_from_type" />
+			<field name="sessionId"				type="sessionId_type" 	get="GetFromCookie(PHPSESSID)" />
+			<field name="ptid" 				type="ptid_type" />
+            <field name="gmmWeb" 			type="gmmWeb_type" 			 />
+			<field name="cookiememkey"    	type="cookiememkey_type"      	get="GetFromCookie(gmmWeb)"  />
+			<field name="headermemkey"     	type="headermemkey_type"       	get="GetFromHeader(gmmWeb)"  />
+            <field name="client_ip" 			type="client_ip_type"   get="GetClientIp()"  />
+        </requestParameter>		
+        <responseParameter>
+			<field name="bpeCode" 			type="retCode_type"/>
+			<field name="bpeMsg" 			type="retMsg_type"/>
+			<field name="fail_reason"   			type="fail_reason_type"  />
+			<field name="isBindWallet" type="isBindWallet_type" />
+        </responseParameter>
+    </message>
+	
+	<message name="NeedSendVerifyModify" id="11" uri="api/accountapi/hps/NeedSendVerifyModify">
+        <requestParameter>
+			<field name="src_code" 			type="src_code_type" 		 />
+			<field name="app_version" 		type="app_version_type" 	 />
+        </requestParameter>		
+        <responseParameter>
+			<field name="bpeCode" 			type="retCode_type"/>
+			<field name="bpeMsg" 			type="retMsg_type"/>
+			<field name="fail_reason"   			type="fail_reason_type"  />
+			<field name="needVerifySmsFlag" type="needVerifySmsFlag_type" />
+        </responseParameter>
+    </message>
+</service>
+

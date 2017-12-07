@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<service  name="validCode" id="480" IsTreeStruct ="false">    	
+	<type name="mobile_type" class="string" code="1"/>	
+	<type name="key_type" class="string" code="2"/>	
+	<type name="vcode_type" class="string" code="3"/>
+	<type name="guid_type" class="string" code="4"/>
+	<type name="appid_type" class="int" code="5"/>
+    <type name="returnMsg_type" class="string" code="6"/>
+    <type name="type_type" class="int" code="7"/>
+	<type name="ip_type" class="string" code="8"/>
+	<type name="templateid_type" class="string" code="9"/>
+	<type name="needSame_type" class="int" code="10"/>
+	<type name="checkcodelen_type" class="int" code="11"/>
+	<type name="gameid_type" class="int" code="12"/>
+	
+	<type name="threashHold_type" class="struct" code="13">
+		<field name="appid" type="int" />
+		<field name="send" type="int" />
+		<field name="threashHold" type="int" />
+		<field name="all" type="int" />
+		<field name="expireTime" type="string" />
+	</type>
+	<type name="threashHold_Array_type" class="array" itemType="threashHold_type"/>
+	<type name="globalBeyond_type" class="int" code="14"/>
+	<type name="sndaid_type" 	class="string" code="15"/>
+	<type name="value1_type" 	class="string" code="16"/>
+	<type name="value2_type" 	class="string" code="17"/>
+	<type name="method_type" 	class="string" code="18"/>
+	<type name="rndlength_type" 	class="string" code="19"/>
+	<type name="rndseed_type" 	class="string" code="20"/>
+	<type name="rndcode_type" 	class="string" code="21"/>
+	<type name="rnd_type" 	class="string" code="22"/>
+	<type name="voicecode_type" 	class="int" code="23"/>
+	<type name="value3_type" class="string" code="24" />
+	<type name="s_msg" class="string" code="25"/>
+	<type name="i_status" class="int" code="26"/>
+	<message name="sendCode" id="1">
+        <requestParameter>		
+			<field name="mobile" type="mobile_type" required="true"/>			
+			<field name="key" type="key_type"/>			
+			<field name="appid" type="appid_type" />			
+			<field name="type" type="type_type" />	
+			<field name="sms" type="returnMsg_type" />
+			<field name="voicecode" type="voicecode_type" desc="文字短信不传, 老的语音短信传1, 新的语音短信传2(推荐)"/>
+        </requestParameter>		
+		<responseParameter>	
+            <field name="key" type="key_type" />
+<!-- 			<field name="sms" type="returnMsg_type" />
+			<field name="mobile" type="mobile_type" />
+			<field name="guid" type="guid_type" />
+			<field name="ip" type="ip_type" />	 -->		
+    	</responseParameter>
+	</message>
+    
+    <message name="valid" id="2">
+        <requestParameter>
+            <field name="key" type="key_type" required="true"/>
+			<field name="vcode" type="vcode_type" required="true"/>
+			<field name="guid" type="guid_type" />	
+        </requestParameter>		
+		<responseParameter>
+            <field name="mobile" type="mobile_type" required="true"/>
+            <field name="type" type="type_type" />
+    	</responseParameter>
+	</message>
+	
+	<message name="sendSms" id="3">
+        <requestParameter>		
+			<field name="mobile" type="mobile_type" required="true"/>				
+			<field name="appid" type="appid_type" />			
+			<field name="type" type="type_type" />	
+			<field name="templateid" type="templateid_type" />
+			<field name="sms" type="returnMsg_type" />
+        </requestParameter>		
+		<responseParameter>			
+    	</responseParameter>
+	</message>
+	
+	<message name="clearCache" id="4">
+        <requestParameter>		
+			<field name="mobile" type="mobile_type" required="true"/>				
+			<field name="appid" type="appid_type" />			
+        </requestParameter>		
+		<responseParameter>			
+    	</responseParameter>
+	</message>
+	
+	<message name="sendCodeRet" id="5">
+        <requestParameter>		
+			<field name="mobile" type="mobile_type" required="true"/>			
+			<field name="gameid" type="gameid_type"  desc="application_id"/>	
+			<field name="templateid" type="appid_type" desc="appid"/>	
+			<field name="needsame" type="needSame_type" />			
+			<field name="type" type="type_type" />	
+			<field name="sms" type="returnMsg_type" />
+			<field name="checkcodelen" type="checkcodelen_type" />
+        </requestParameter>		
+		<responseParameter>		
+			<field name="checkcode" type="vcode_type" desc="vcode"/>		
+    	</responseParameter>
+	</message>
+	
+	<message name="clearCodeCache" id="6">
+        <requestParameter>		
+			<field name="mobile" type="mobile_type" required="true"/>			
+			<field name="gameid" type="gameid_type"  desc="application_id"/>			
+        </requestParameter>		
+		<responseParameter>			
+    	</responseParameter>
+	</message>
+	
+	<message name="queryStatus" id="7">
+        <requestParameter>				
+        </requestParameter>		
+		<responseParameter>	
+			<field name="globalBeyond" type="globalBeyond_type"  />	
+			<field name="infos"		   type="threashHold_Array_type"  />	
+    	</responseParameter>
+	</message>
+	
+	<message name="validCodeNoDelete" id="8">
+        <requestParameter>
+            <field name="key" type="key_type" required="true"/>
+			<field name="vcode" type="vcode_type" required="true"/>
+			<field name="guid" type="guid_type" />	
+        </requestParameter>		
+		<responseParameter>
+            <field name="mobile" type="mobile_type" required="true"/>
+            <field name="type" type="type_type" />
+    	</responseParameter>
+	</message>
+	
+	<message name="getRndCodeValue" id="9">
+        <requestParameter>
+			<field name="key" 		type="key_type"   required="true"/>
+			<field name="rndtype" 	type="rnd_type"	  required="true"/>
+			<field name="readType" 	type="type_type"  required="true"/>	
+        </requestParameter>		
+		<responseParameter>
+            <field name="sndaid" 	type="sndaid_type" />
+            <field name="ip" 		type="ip_type" />
+            <field name="value_2"   type="value2_type"/>
+            <field name="value_3"   type="value3_type"/>            
+    	</responseParameter>
+	</message>
+	
+	<message name="genRndCode" id="10">
+        <requestParameter>
+			<field name="value_1" 			type="value1_type"  />
+			<field name="value_2" 			type="value2_type" />
+			<field name="method" 			type="method_type"   />	
+			<field name="rndType" 			type="rnd_type" />
+			<field name="rndseed" 			type="rndseed_type"  />		
+			<field name="value_3"           type="value3_type"/> 
+       </requestParameter>		
+		<responseParameter>
+            <field name="rndcode" 			type="rndcode_type" />           
+    	</responseParameter>
+	</message>
+
+	<message name="unfreezeSms" id="11" desc="解除短信下行限制. 短信上行解除, 短信上行后回调">
+        <requestParameter>		
+			<field name="phone" type="mobile_type" required="true"/>				
+			<field name="msg" type="s_msg" desc="上行的短信内容,只是记录,无逻辑"/>			
+        </requestParameter>
+		<responseParameter>
+    	</responseParameter>
+	</message>
+
+	<message name="getUnfreezeStatus" id="12" desc="查看手机号是否通过短信上行解除短信下行限制.缓存24小时">
+        <requestParameter>		
+			<field name="phone" type="mobile_type" required="true"/>				
+        </requestParameter>
+		<responseParameter>
+			<field name="status" type="i_status" desc="1已上行解除限制, 0没有上行"/>        
+    	</responseParameter>
+	</message>
+	
+</service>
+

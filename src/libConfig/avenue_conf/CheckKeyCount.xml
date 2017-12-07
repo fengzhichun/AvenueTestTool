@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service  name="CheckKeyCount" id="56001" IsTreeStruct ="false">
+
+	<type name="type_type" code="1" class="int" />
+	<type name="keyItem_type" code="2" class="string" />
+	<type name="keyArray_type" class="array" itemType="keyItem_type"/>
+	<type name="lock_type" code="3" class="int" />
+	<type name="step_type" code="4" class="int" />
+	<type name="kfcTypeItem_type" code="5" class="string" />
+	<type name="kfcType_type" class="array" itemType="kfcTypeItem_type"/>
+	<type name="key2Item_type" code="6" class="string" />
+	<type name="key2_type" class="array" itemType="key2Item_type"/>
+	<type name="valueItem_type" code="7" class="string" />
+	<type name="value_type" class="array" itemType="valueItem_type"/>
+	<type name="detailItem_type" code="8" class="string" />
+	<type name="detail_type" class="array" itemType="detailItem_type"/>
+	<type name="account_type" code="9" class="string" />
+	<type name="needReturnLeftTimes_type" code="10" class="int" />
+	<type name="leftTimesItem_type" code="11" class="string" />
+	<type name="leftTimes_type" class="array" itemType="leftTimesItem_type"/>
+	
+    <message name="check" id="1">
+        <requestParameter>
+			<field name="type" type="type_type" required="true" />
+			<field name="keyArray" type="keyArray_type" required="true" />
+        </requestParameter>
+        <responseParameter>
+			<field name="lock" type="lock_type" /> 
+        </responseParameter>
+    </message>
+	
+	<message name="clear" id="2">
+        <requestParameter>
+			<field name="type" type="type_type" required="true" />
+			<field name="keyArray" type="keyArray_type" required="true" />
+        </requestParameter>
+        <responseParameter>
+        </responseParameter>
+    </message>
+	
+	<message name="addKeyCount" id="3">
+        <requestParameter>
+			<field name="type" type="type_type" required="true" />
+			<field name="keyArray" type="keyArray_type" required="true" />
+			<field name="step" type="step_type" required="true" />
+        </requestParameter>
+        <responseParameter>
+        </responseParameter>
+    </message>
+	
+	<message name="kfcCheckAdd" id="4">
+        <requestParameter>
+			<field name="kfcType" type="kfcType_type" required="true" />
+			<field name="key" type="keyArray_type" required="true" />
+			<field name="key2" type="key2_type"  />
+			<field name="value" type="value_type"  />
+			<field name="needReturnLeftTimes" type="needReturnLeftTimes_type"  />
+        </requestParameter>
+        <responseParameter>
+		    <field name="hasLocked" type="lock_type" /> 
+			<field name="detail" type="detail_type" /> 
+			<field name="leftTimes" type="leftTimes_type"  />
+        </responseParameter>
+    </message>
+	
+	<message name="kfcCheck" id="5">
+        <requestParameter>
+			<field name="kfcType" type="kfcType_type" required="true" />
+			<field name="key" type="keyArray_type" required="true" />
+			<field name="key2" type="key2_type"  />
+        </requestParameter>
+        <responseParameter>
+		    <field name="hasLocked" type="lock_type" /> 
+			<field name="detail" type="detail_type" /> 
+        </responseParameter>
+    </message>
+	
+	<message name="kfcAdd" id="6">
+        <requestParameter>
+			<field name="kfcType" type="kfcType_type" required="true" />
+			<field name="key" type="keyArray_type" required="true" />
+			<field name="value" type="value_type"  />
+			<field name="account" type="account_type"  />
+        </requestParameter>
+        <responseParameter>
+        </responseParameter>
+    </message>
+	
+	<message name="kfcClear" id="7">
+        <requestParameter>
+			<field name="kfcType" type="kfcType_type" required="true" />
+			<field name="key" type="keyArray_type" required="true" />
+			<field name="account" type="account_type"  />
+        </requestParameter>
+        <responseParameter>
+        </responseParameter>
+    </message>
+	
+	<message name="kfcClearAll" id="8">
+        <requestParameter>
+			<field name="key" type="keyItem_type" required="true" />
+			<field name="account" type="account_type"  />
+        </requestParameter>
+        <responseParameter>
+        </responseParameter>
+    </message>
+</service>

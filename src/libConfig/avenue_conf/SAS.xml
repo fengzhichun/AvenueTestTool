@@ -1,0 +1,1773 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 此文件是SAS客户端的配置文件，如果修改 sas_tlv.properties, 需同时更新此文件并通知宗金良 -->
+
+<service name="SAS" id="23" IsTreeStruct="false">
+	<type name="result_type" class="int" code="1" />
+	<type name="resultMsg_type" class="string" code="2" />
+	<type name="echo_type" class="string" code="3" />
+	<type name="dbId_type" class="int" code="4" />
+	<type name="command_type" class="string" code="5" />
+	<type name="commandData_type" class="string" code="6" />
+
+	<type name="guid_type" class="string" code="11" />
+	<type name="sessionId_type" class="string" code="12" />
+	<type name="sndaId_type" class="string" code="13" />
+	<type name="spId_type" class="int" code="14" />
+	<type name="appId_type" class="int" code="15" />
+	<type name="areaId_type" class="int" code="16" />
+	<type name="startTime_type" class="string" code="17" />
+	<type name="endTime_type" class="string" code="18" />
+	<type name="lossType_type" class="int" code="19" />
+	<type name="indication_type" class="string" code="20" />
+	<type name="operator_type" class="string" code="21" />
+	<type name="bindTime_type" class="string" code="22" />
+	<type name="verifyDay_type" class="int" code="23" />
+	<type name="callTime_type" class="string" code="24" />
+	<type name="appSvrIp_type" class="string" code="25" />
+	<type name="endpointIp_type" class="string" code="26" />
+	<type name="endpointType_type" class="int" code="27" />
+	<type name="platformType_type" class="int" code="28" />
+	<type name="appendix_type" class="string" code="29" />
+	<type name="processTime_type" class="string" code="30" />
+	<type name="modifyFlag_type" class="int" code="31" />
+	<type name="userIdType_type" class="int" code="32" />
+	<type name="userId_type" class="string" code="33" />
+	<type name="safeDeviceType_type" class="int" code="34" />
+	<type name="safeDeviceSerialNo_type" class="string" code="35" />
+	<type name="safeDeviceLevel_type" class="int" code="36" />
+	<type name="safeDeviceApplyType_type" class="int" code="37" />
+	<type name="safeDeviceReservedPwd_type" class="string" code="38" />
+	<type name="validateTime_type" class="string" code="39" />
+	<type name="invalidateTime_type" class="string" code="40" />
+	<type name="verifyStopTime_type" class="string" code="41" />
+	<type name="suspendType_type" class="int" code="42" />
+	<type name="suspendSource_type" class="string" code="43" />
+	<type name="safeDeviceApplyTypeList_type" class="string" code="44" />
+	<type name="appSiteCode_type" class="string" code="45" />
+	<type name="bigString_type" class="string" code="46" />
+	<type name="logType_type" class="string" code="47" />
+	<type name="operType_type" class="int" code="48" />
+	<type name="gameAccount_type" class="string" code="49" />
+	<type name="createTime_type" class="string" code="50" />
+	<type name="ptId_type" class="string" code="51" />
+	<type name="loginId_type" class="string" code="52" />
+	<type name="password_type" class="string" code="53" />
+	<type name="newPassword_type" class="string" code="54" />
+	<type name="oldPassword_type" class="string" code="55" />
+	<type name="passwordStrength_type" class="int" code="56" />
+	<type name="updateTime_type" class="string" code="57" />
+
+	<type name="appIds_type" class="int" code="58" />
+	<type name="areaIds_type" class="int" code="59" />
+	<type name="lossTypes_type" class="int" code="60" />
+	<type name="bindTimes_type" class="string" code="61" />
+	<type name="endpointIps_type" class="string" code="62" />
+	<type name="safeDeviceSerialNos_type" class="string" code="63" />
+	<type name="safeDeviceLevels_type" class="int" code="64" />
+	<type name="verifyStopTimes_type" class="string" code="65" />
+	<type name="gameAccounts_type" class="string" code="66" />
+	<type name="createTimes_type" class="string" code="67" />
+
+	<type name="loginAccount_type" class="string" code="68" />
+
+	<type name="validateTimes_type" class="string" code="69" />
+	<type name="invalidateTimes_type" class="string" code="70" />
+	<type name="oldSerialNo_type" class="string" code="71" />
+	<type name="newSerialNo_type" class="string" code="72" />
+	<type name="oldReservedPwd_type" class="string" code="73" />
+	<type name="newReservedPwd_type" class="string" code="74" />
+	<type name="safeDeviceTypes_type" class="int" code="75" />
+	<type name="bindEnables_type" class="int" code="76" />
+
+	<type name="beginTime_type" class="string" code="77" />
+	<type name="groupId_type" class="string" code="78" />
+
+	<type name="sndaIds_type" class="string" code="79" />
+	<type name="spIds_type" class="string" code="80" />
+	<type name="groupIds_type" class="string" code="81" />
+	<type name="beginTimes_type" class="string" code="82" />
+	<type name="endTimes_type" class="string" code="83" />
+
+	<type name="offset_type" class="int" code="84" />
+	<type name="length_type" class="int" code="85" />
+	<type name="duration_type" class="int" code="86" />
+	<type name="loginIp_type" class="string" code="87" />
+	<type name="total_type" class="int" code="88" />
+	<type name="type_type" class="string" code="89" />
+	<type name="reservedpwds_type" class="string" code="90" />
+	<type name="attribute_type" class="string" code="91" />
+	<type name="types_type" class="string" code="92" />
+	<type name="userAttribute_type" class="int" code="93" />
+	<type name="lostFlag_type" class="string" code="94" />
+	<type name="loginFlag_type" class="string" code="95" />
+	<type name="accountType_type" class="int" code="96" />
+	<type name="operators_type" class="string" code="97" />
+	<type name="data_type" class="string" code="98" />
+	<type name="test_type" class="int" code="99" />
+	<type name="appName_type" class="string" code="100" />
+	<type name="ekeyType" class="string" code="101" />
+	<type name="ekeyTypes_Array_type" class="string" code="102" />
+	<type name="keyDisplayType" class="string" code="103" />
+	<type name="ekeyDisplayTypes_Array_type" class="string" code="104" />
+	<type name="version_type" class="int" code="105" />
+	<type name="ekeyAttacheds_Array_type" class="string" code="106" />
+	<type name="passwords_Array_type" class="string" code="107" />
+	<type name="relatedSndaId_type" class="string" code="108" />
+	<type name="multiAppId_type" class="string" code="109" />
+	<type name="multiAreaId_type" class="string" code="110" />
+	<type name="ignoreField_type" class="string" code="111" />
+	<type name="beforeDays_type" class="int" code="112" />
+	<type name="matchs_Array_type" class="string" code="113" />
+	<type name="generateGameAccount_type" class="int" code="114" />
+	<type name="disableLoginListCheck_type" class="int" code="115" />
+	<type name="sortType_type" class="string" code="116" />
+	<type name="queryCount_type" class="int" code="117" />
+	<type name="operatorType_type" class="string" code="118" />
+	<type name="operatorTypes_type" class="string" code="119" />
+	<type name="updateTimes_type" class="string" code="120"/>
+	<type name="verifySndaId_type" class="string" code="121"/>
+	<type name="salt_type" class="string" code="122"/>
+	
+	
+	<type name="appIds_Array_type" class="array" itemType="appIds_type" />
+	<type name="areaIds_Array_type" class="array" itemType="areaIds_type" />
+	<type name="lossTypes_Array_type" class="array" itemType="lossTypes_type" />
+	<type name="bindTimes_Array_type" class="array" itemType="bindTimes_type" />
+	<type name="endpointIps_Array_type" class="array" itemType="endpointIps_type" />
+	<type name="safeDeviceSerialNos_Array_type" class="array"
+		itemType="safeDeviceSerialNos_type" />
+	<type name="gameAccounts_Array_type" class="array" itemType="gameAccounts_type" />
+	<type name="createTimes_Array_type" class="array" itemType="createTimes_type" />
+	<type name="safeDeviceApplyTypeList_Array_type" class="array"
+		itemType="safeDeviceApplyTypeList_type" />
+	<type name="safeDeviceLevels_Array_type" class="array"
+		itemType="safeDeviceLevels_type" />
+	<type name="verifyStopTimes_Array_type" class="array"
+		itemType="verifyStopTimes_type" />
+	<type name="validateTimes_Array_type" class="array" itemType="validateTimes_type" />
+	<type name="invalidateTimes_Array_type" class="array"
+		itemType="invalidateTimes_type" />
+	<type name="safeDeviceType_Array_type" class="array"
+		itemType="safeDeviceTypes_type" />
+	<type name="bindEnable_Array_type" class="array" itemType="bindEnables_type" />
+
+	<type name="sndaId_Array_type" class="array" itemType="sndaIds_type" />
+	<type name="spId_Array_type" class="array" itemType="spIds_type" />
+	<type name="groupId_Array_type" class="array" itemType="groupIds_type" />
+	<type name="beginTime_Array_type" class="array" itemType="beginTimes_type" />
+	<type name="endTime_Array_type" class="array" itemType="endTimes_type" />
+	<type name="reservedPwd_Array_type" class="array" itemType="reservedpwds_type" />
+	<type name="type_Array_type" class="array" itemType="types_type" />
+	<type name="operator_Array_type" class="array" itemType="operators_type" />
+	<type name="ekeyType_Array_type" class="array" itemType="ekeyTypes_Array_type" />
+	<type name="ekeyDisplayType_Array_type" class="array"
+		itemType="ekeyDisplayTypes_Array_type" />
+	<type name="ekeyAttached_Array_type" class="array"
+		itemType="ekeyAttacheds_Array_type" />
+	<type name="password_Array_type" class="array" itemType="passwords_Array_type" />
+	<type name="match_Array_type" class="array" itemType="matchs_Array_type" />
+	<type name="operatorType_Array_type" class="array" itemType="operatorTypes_type" />
+	<type name="updateTime_Array_type" class="array" itemType="updateTimes_type" />
+	
+	<message name="queryMemcache" id="4">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="command" type="command_type" required="true" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="commandData" type="commandData_type" />
+		</responseParameter>
+	</message>
+
+	<message name="configCacheManager" id="5">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="type" type="type_type" required="true" />
+			<field name="appId" type="appId_type" />
+			<field name="areaId" type="areaId_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="appendix" type="appendix_type" />
+		</responseParameter>
+	</message>
+
+	<message name="login" id="2301">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="password" type="password_type" required="true" />
+			<field name="accountType" type="accountType_type" required="true" />
+			<field name="loginAccount" type="loginAccount_type" required="true" />
+			<field name="version" type="version_type" />
+			<field name="verifySndaId" type="verifySndaId_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+
+			<field name="safeDeviceTypeArray" type="safeDeviceType_Array_type" />
+			<field name="safeDeviceSerialNoArray" type="safeDeviceSerialNos_Array_type" />
+			<field name="ekeyTypeArray" type="ekeyType_Array_type" />
+			<field name="ekeyDisplayTypeArray" type="ekeyDisplayType_Array_type" />
+			<field name="ekeyAttachedArray" type="ekeyAttached_Array_type" />
+			<field name="safeDeviceLevelArray" type="safeDeviceLevels_Array_type" />
+			<field name="safeDeviceApplyTypeArray" type="safeDeviceApplyTypeList_Array_type" />
+			<field name="lossTypeArray" type="lossTypes_Array_type" />
+			<field name="bindTimeArray" type="bindTimes_Array_type" />
+			<field name="verifyStopTimeArray" type="verifyStopTimes_Array_type" />
+
+			<field name="validateTimeArray" type="validateTimes_Array_type" />
+			<field name="invalidateTimeArray" type="invalidateTimes_Array_type" />
+			<field name="endpointIpArray" type="endpointIps_Array_type" />
+			<field name="bindEnableArray" type="bindEnable_Array_type" />
+			<field name="reservedPwdArray" type="reservedPwd_Array_type" />
+			<field name="gameAccount" type="gameAccount_type" />
+			<field name="userAttribute" type="userAttribute_type" />
+			
+		</responseParameter>
+	</message>
+
+	<message name="trustLogin" id="2401">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="accountType" type="accountType_type" required="true" />
+			<field name="loginAccount" type="loginAccount_type" required="true" />
+			<field name="generateGameAccount" type="generateGameAccount_type" />
+			<field name="disableLoginListCheck" type="disableLoginListCheck_type" />
+			<field name="version" type="version_type" />
+			<field name="verifySndaId" type="verifySndaId_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+
+			<field name="safeDeviceTypeArray" type="safeDeviceType_Array_type" />
+			<field name="safeDeviceSerialNoArray" type="safeDeviceSerialNos_Array_type" />
+			<field name="ekeyTypeArray" type="ekeyType_Array_type" />
+			<field name="ekeyDisplayTypeArray" type="ekeyDisplayType_Array_type" />
+			<field name="ekeyAttachedArray" type="ekeyAttached_Array_type" />
+			<field name="safeDeviceLevelArray" type="safeDeviceLevels_Array_type" />
+			<field name="safeDeviceApplyTypeArray" type="safeDeviceApplyTypeList_Array_type" />
+			<field name="lossTypeArray" type="lossTypes_Array_type" />
+			<field name="bindTimeArray" type="bindTimes_Array_type" />
+			<field name="verifyStopTimeArray" type="verifyStopTimes_Array_type" />
+
+			<field name="validateTimeArray" type="validateTimes_Array_type" />
+			<field name="invalidateTimeArray" type="invalidateTimes_Array_type" />
+			<field name="endpointIpArray" type="endpointIps_Array_type" />
+			<field name="bindEnableArray" type="bindEnable_Array_type" />
+			<field name="reservedPwdArray" type="reservedPwd_Array_type" />
+			<field name="gameAccount" type="gameAccount_type" />
+			<field name="userAttribute" type="userAttribute_type" />
+		</responseParameter>
+	</message>
+
+	<message name="getPasswordStrength" id="2302">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+
+			<field name="sndaId" type="sndaId_type" required="true" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+
+			<field name="passwordStrength" type="passwordStrength_type" />
+		</responseParameter>
+	</message>
+
+	<message name="register" id="2303">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+
+
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="password" type="password_type" required="true" />
+			<field name="operator" type="operator_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+		</responseParameter>
+	</message>
+
+
+	<message name="resetPassword" id="2304">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+
+
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="newPassword" type="newPassword_type" required="true" />
+			<field name="operator" type="operator_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+		</responseParameter>
+	</message>
+
+	<message name="modifyPassword" id="2305">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+
+
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="oldPassword" type="oldPassword_type" required="true" />
+			<field name="newPassword" type="newPassword_type" required="true" />
+			<field name="operator" type="operator_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+		</responseParameter>
+	</message>
+
+	<message name="syncRegister" id="2306">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+
+
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="password" type="password_type" required="true" />
+			<field name="createTime" type="createTime_type" required="true" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+		</responseParameter>
+	</message>
+
+	<message name="getPasswordUpdateTime" id="2307">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+			<field name="sndaId" type="sndaId_type" required="true" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+			<field name="updateTime" type="updateTime_type" />
+		</responseParameter>
+	</message>
+
+	<message name="verifyPasswordService" id="2308">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="password" type="password_type" required="true" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+		</responseParameter>
+	</message>
+	<message name="addGameAccount" id="2311">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+
+
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="gameAccount" type="gameAccount_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+			<field name="gameAccount" type="gameAccount_type" />
+		</responseParameter>
+	</message>
+
+	<message name="modifyGameAccount" id="2312">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+
+
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="gameAccount" type="gameAccount_type" required="true" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+		</responseParameter>
+	</message>
+
+	<message name="queryGameAccount" id="2313">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+
+
+			<field name="sndaId" type="sndaId_type" required="true" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+
+			<field name="gameAccount" type="gameAccount_type" />
+			<field name="createTime" type="createTime_type" />
+		</responseParameter>
+	</message>
+
+	<message name="queryAllGameAccount" id="2314">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+
+
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="safeDeviceType" type="safeDeviceType_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+
+			<field name="appIdArray" type="appIds_Array_type" />
+			<field name="areaIdarray" type="areaIds_Array_type" />
+			<field name="gameAccountArray" type="gameAccounts_Array_type" />
+			<field name="createTimeArray" type="createTimes_Array_type" />
+			<field name="safeDeviceApplyTypeArray" type="safeDeviceApplyTypeList_Array_type" />
+		</responseParameter>
+	</message>
+
+	<message name="queryGameAccountByApp" id="2363">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+
+
+			<field name="sndaId" type="sndaId_type" required="true" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+
+			<field name="appIdArray" type="appIds_Array_type" />
+			<field name="areaIdarray" type="areaIds_Array_type" />
+			<field name="gameAccountArray" type="gameAccounts_Array_type" />
+			<field name="createTimeArray" type="createTimes_Array_type" />
+		</responseParameter>
+	</message>
+
+
+	<message name="queryUserByGameAccount" id="2315">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+
+
+			<field name="gameAccount" type="gameAccount_type" required="true" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+
+			<field name="sndaId" type="sndaId_type" />
+			<field name="ptId" type="ptId_type" />
+		</responseParameter>
+	</message>
+
+
+	<message name="addSafeDeviceWhitelist" id="2321">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="safeDeviceType" type="safeDeviceType_type"
+				required="true" />
+			<field name="validateTime" type="validateTime_type" />
+			<field name="invalidateTime" type="invalidateTime_type" />
+			<field name="operator" type="operator_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+		</responseParameter>
+	</message>
+
+	<message name="modifySafeDeviceWhitelist" id="2322">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="safeDeviceType" type="safeDeviceType_type"
+				required="true" />
+			<field name="validateTime" type="validateTime_type" />
+			<field name="invalidateTime" type="invalidateTime_type" />
+			<field name="operator" type="operator_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+		</responseParameter>
+	</message>
+
+	<message name="removeSafeDeviceWhitelist" id="2323">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="safeDeviceType" type="safeDeviceType_type"
+				required="true" />
+			<field name="operator" type="operator_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+		</responseParameter>
+	</message>
+
+	<message name="querySafeDeviceWhitelist" id="2324">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="safeDeviceType" type="safeDeviceType_type"
+				required="true" />
+			<field name="operator" type="operator_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+
+			<field name="spId" type="spId_type" />
+			<field name="appId" type="appId_type" />
+			<field name="areaId" type="areaId_type" />
+			<field name="createTime" type="createTime_type" />
+			<field name="updateTime" type="updateTime_type" />
+			<field name="validateTime" type="validateTime_type" />
+			<field name="invalidateTime" type="invalidateTime_type" />
+		</responseParameter>
+	</message>
+
+	<message name="addSndaIdLoginList" id="2335">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_type" />
+			<field name="appId" type="appId_type" />
+			<field name="areaId" type="areaId_type" />
+
+			<field name="spId" type="spId_type" />
+			<field name="groupId" type="groupId_type" />
+
+			<field name="createTime" type="createTime_type" />
+			<field name="updateTime" type="updateTime_type" />
+
+			<field name="beginTime" type="beginTime_type" required="true" />
+			<field name="endTime" type="endTime_type" required="true" />
+			<field name="operator" type="operator_type" required="true" />
+			<field name="operatorType" type="operatorType_type" />
+			<field name="type" type="type_type" required="true" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+		</responseParameter>
+	</message>
+
+	<message name="addBatchSndaIdLoginList" id="2349">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_type" />
+			<field name="attribute" type="attribute_type" />
+
+			<field name="spId" type="spId_type" />
+			<field name="groupId" type="groupId_type" />
+
+			<field name="beginTime" type="beginTime_type" required="true" />
+			<field name="endTime" type="endTime_type" required="true" />
+			<field name="operator" type="operator_type" />
+			<field name="operatorType" type="operatorType_type" />
+			<field name="type" type="type_type" required="true" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+		</responseParameter>
+	</message>
+
+	<message name="removeSndaIdLoginList" id="2337">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_type" />
+			<field name="appId" type="appId_type" />
+			<field name="areaId" type="areaId_type" />
+
+			<field name="spId" type="spId_type" />
+			<field name="groupId" type="groupId_type" />
+			<field name="type" type="type_type" required="true" />
+			<field name="operatorType" type="operatorType_type" required="true" />
+			<field name="operator" type="operator_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+		</responseParameter>
+	</message>
+
+	<message name="removeLoginListBySndaId" id="2364">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_type" />
+			<field name="spId" type="spId_type" />
+			<field name="groupId" type="groupId_type" />
+			<field name="operator" type="operator_type" />
+			<field name="operatorType" type="operatorType_type" required="true" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+		</responseParameter>
+	</message>
+
+	<message name="querySndaIdLoginList" id="2338">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_type" />
+			<field name="appId" type="appId_type" />
+			<field name="areaId" type="areaId_type" />
+
+			<field name="spId" type="spId_type" />
+			<field name="groupId" type="groupId_type" />
+			<field name="type" type="type_type" required="true" />
+			<field name="operator" type="operator_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="sndaId" type="sndaId_type" />
+			<field name="spId" type="spId_type" />
+			<field name="appId" type="appId_type" />
+			<field name="areaId" type="areaId_type" />
+			<field name="groupId" type="groupId_type" />
+			<field name="beginTime" type="beginTime_type" />
+			<field name="endTime" type="endTime_type" />
+			<field name="operator" type="operator_type" />
+			<field name="operatorType" type="operatorType_type" required="true" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="updateTime" type="updateTime_type" required="true" />
+		</responseParameter>
+	</message>
+
+	<message name="queryAllSndaIdLoginList" id="2339">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_type" />
+			<field name="appId" type="appId_type" />
+			<field name="areaId" type="areaId_type" />
+
+			<field name="spId" type="spId_type" />
+			<field name="groupId" type="groupId_type" />
+			<field name="offset" type="offset_type" />
+			<field name="length" type="length_type" />
+			<field name="type" type="type_type" required="true" />
+			<field name="operator" type="operator_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="sndaIdArray" type="sndaId_Array_type" />
+			<field name="spIdArray" type="spId_Array_type" />
+			<field name="appIdArray" type="appIds_Array_type" />
+			<field name="areaIdArray" type="areaIds_Array_type" />
+			<field name="groupIdArray" type="groupId_Array_type" />
+			<field name="beginTimeArray" type="beginTime_Array_type" />
+			<field name="endTimeArray" type="endTime_Array_type" />
+			<field name="typeArray" type="type_Array_type" />
+			<field name="operatorArray" type="operator_Array_type" />
+			<field name="operatorTypeArray" type="operatorType_Array_type" />
+			<field name="endpointIpArray" type="endpointIps_Array_type" />
+			<field name="updateTimeArray" type="updateTime_Array_type" />
+			<field name="total" type="total_type" />
+		</responseParameter>
+	</message>
+
+	<message name="addInnerAccount" id="2340">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_type" />
+			<field name="appId" type="appId_type" />
+			<field name="areaId" type="areaId_type" />
+
+			<field name="spId" type="spId_type" />
+			<field name="groupId" type="groupId_type" />
+
+			<field name="beginTime" type="beginTime_type" />
+			<field name="endTime" type="endTime_type" />
+			<field name="operator" type="operator_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+		</responseParameter>
+	</message>
+
+	<message name="addBatchInnerAccount" id="2348">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_type" />
+			<field name="attribute" type="attribute_type" />
+
+			<field name="spId" type="spId_type" />
+			<field name="groupId" type="groupId_type" />
+
+			<field name="beginTime" type="beginTime_type" />
+			<field name="endTime" type="endTime_type" />
+			<field name="operator" type="operator_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+		</responseParameter>
+	</message>
+
+	<message name="modifyInnerAccount" id="2341">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_type" />
+			<field name="appId" type="appId_type" />
+			<field name="areaId" type="areaId_type" />
+
+			<field name="spId" type="spId_type" />
+			<field name="groupId" type="groupId_type" />
+
+			<field name="beginTime" type="beginTime_type" required="true" />
+			<field name="endTime" type="endTime_type" required="true" />
+			<field name="operator" type="operator_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+		</responseParameter>
+	</message>
+
+	<message name="removeInnerAccount" id="2342">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_type" />
+			<field name="appId" type="appId_type" />
+			<field name="areaId" type="areaId_type" />
+
+			<field name="spId" type="spId_type" />
+			<field name="groupId" type="groupId_type" />
+			<field name="operator" type="operator_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+		</responseParameter>
+	</message>
+
+	<message name="queryInnerAccount" id="2343">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_type" />
+			<field name="appId" type="appId_type" />
+			<field name="areaId" type="areaId_type" />
+
+			<field name="spId" type="spId_type" />
+			<field name="groupId" type="groupId_type" />
+			<field name="type" type="type_type" />
+			<field name="operator" type="operator_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="sndaId" type="sndaId_type" />
+			<field name="spId" type="spId_type" />
+			<field name="appId" type="appId_type" />
+			<field name="areaId" type="areaId_type" />
+			<field name="groupId" type="groupId_type" />
+			<field name="beginTime" type="beginTime_type" />
+			<field name="endTime" type="endTime_type" />
+			<field name="operator" type="operator_type" />
+		</responseParameter>
+	</message>
+
+	<message name="queryAllInnerAccount" id="2344">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_type" />
+			<field name="appId" type="appId_type" />
+			<field name="areaId" type="areaId_type" />
+
+			<field name="spId" type="spId_type" />
+			<field name="groupId" type="groupId_type" />
+			<field name="offset" type="offset_type" />
+			<field name="length" type="length_type" />
+			<field name="operator" type="operator_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="sndaIdArray" type="sndaId_Array_type" />
+			<field name="spIdArray" type="spId_Array_type" />
+			<field name="appIdArray" type="appIds_Array_type" />
+			<field name="areaIdArray" type="areaIds_Array_type" />
+			<field name="groupIdArray" type="groupId_Array_type" />
+			<field name="beginTimeArray" type="beginTime_Array_type" />
+			<field name="endTimeArray" type="endTime_Array_type" />
+			<field name="operatorArray" type="operator_Array_type" />
+			<field name="total" type="total_type" />
+		</responseParameter>
+	</message>
+
+	<message name="addTempPassword" id="2345">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_type" />
+			<field name="appId" type="appId_type" />
+			<field name="areaId" type="areaId_type" />
+			<field name="loginIp" type="loginIp_type" />
+			<field name="beginTime" type="beginTime_type" />
+			<field name="duration" type="duration_type" />
+			<field name="operator" type="operator_type" />
+			<field name="password" type="password_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+		</responseParameter>
+	</message>
+	<message name="removeTempPassword" id="2346">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_type" />
+			<field name="appId" type="appId_type" />
+			<field name="areaId" type="areaId_type" />
+			<field name="loginIp" type="loginIp_type" />
+			<field name="operator" type="operator_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+		</responseParameter>
+	</message>
+
+	<message name="queryTempPassword" id="2347">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_type" />
+			<field name="spId" type="spId_type" />
+			<field name="appId" type="appId_type" />
+			<field name="areaId" type="areaId_type" />
+			<field name="loginIp" type="loginIp_type" />
+			<field name="operator" type="operator_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="sndaId" type="sndaId_type" />
+			<field name="appId" type="appId_type" />
+			<field name="areaId" type="areaId_type" />
+			<field name="loginIp" type="loginIp_type" />
+			<field name="beginTime" type="beginTime_type" />
+			<field name="duration" type="duration_type" />
+			<field name="password" type="password_type" />
+		</responseParameter>
+	</message>
+
+	<message name="queryAllSafeDeviceBind" id="2350">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="safeDeviceType" type="safeDeviceType_type" />
+			<field name="version" type="version_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+
+			<field name="safeDeviceTypeArray" type="safeDeviceType_Array_type" />
+			<field name="safeDeviceSerialNoArray" type="safeDeviceSerialNos_Array_type" />
+			<field name="ekeyTypeArray" type="ekeyType_Array_type" />
+			<field name="ekeyDisplayTypeArray" type="ekeyDisplayType_Array_type" />
+			<field name="ekeyAttachedArray" type="ekeyAttached_Array_type" />
+			<field name="safeDeviceLevelArray" type="safeDeviceLevels_Array_type" />
+			<field name="safeDeviceApplyTypeArray" type="safeDeviceApplyTypeList_Array_type" />
+			<field name="lossTypeArray" type="lossTypes_Array_type" />
+			<field name="bindTimeArray" type="bindTimes_Array_type" />
+			<field name="verifyStopTimeArray" type="verifyStopTimes_Array_type" />
+			<field name="validateTimeArray" type="validateTimes_Array_type" />
+			<field name="invalidateTimeArray" type="invalidateTimes_Array_type" />
+			<field name="endpointIpArray" type="endpointIps_Array_type" />
+			<field name="bindEnableArray" type="bindEnable_Array_type" />
+			<field name="reservedPwdArray" type="reservedPwd_Array_type" />
+		</responseParameter>
+	</message>
+
+	<message name="querySafeDeviceBindStatus" id="2351">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="safeDeviceType" type="safeDeviceType_type"
+				required="true" />
+			<field name="version" type="version_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+
+			<field name="safeDeviceSerialNoArray" type="safeDeviceSerialNos_Array_type" />
+			<field name="ekeyTypeArray" type="ekeyType_Array_type" />
+			<field name="ekeyDisplayTypeArray" type="ekeyDisplayType_Array_type" />
+			<field name="ekeyAttachedArray" type="ekeyAttached_Array_type" />
+			<field name="safeDeviceLevelArray" type="safeDeviceLevels_Array_type" />
+			<field name="safeDeviceApplyTypeArray" type="safeDeviceApplyTypeList_Array_type" />
+			<field name="lossTypeArray" type="lossTypes_Array_type" />
+			<field name="bindTimeArray" type="bindTimes_Array_type" />
+			<field name="verifyStopTimeArray" type="verifyStopTimes_Array_type" />
+			<field name="endpointIpArray" type="endpointIps_Array_type" />
+			<field name="validateTimeArray" type="validateTimes_Array_type" />
+			<field name="invalidateTimeArray" type="invalidateTimes_Array_type" />
+			<field name="safeDeviceSerialNo" type="safeDeviceSerialNo_type" />
+		</responseParameter>
+	</message>
+
+	<message name="bindSafeDevice" id="2352">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="safeDeviceType" type="safeDeviceType_type"
+				required="true" />
+			<field name="safeDeviceSerialNo" type="safeDeviceSerialNo_type"
+				required="true" />
+			<field name="safeDeviceReservedPwd" type="safeDeviceReservedPwd_type" />
+			<field name="bindTime" type="bindTime_type" required="true" />
+			<field name="verifyDay" type="verifyDay_type" required="true" />
+			<field name="validateTime" type="validateTime_type" />
+			<field name="invalidateTime" type="invalidateTime_type" />
+			<field name="operator" type="operator_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+		</responseParameter>
+	</message>
+
+	<message name="unbindSafeDevice" id="2353">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="safeDeviceType" type="safeDeviceType_type"
+				required="true" />
+			<field name="safeDeviceSerialNo" type="safeDeviceSerialNo_type"
+				required="true" />
+			<field name="operator" type="operator_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+		</responseParameter>
+	</message>
+
+	<message name="suspendSafeDevice" id="2354">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="safeDeviceType" type="safeDeviceType_type"
+				required="true" />
+			<field name="safeDeviceSerialNo" type="safeDeviceSerialNo_type"
+				required="true" />
+			<field name="suspendType" type="suspendType_type" required="true" />
+			<field name="suspendSource" type="suspendSource_type" required="true" />
+			<field name="startTime" type="startTime_type" required="true" />
+			<field name="endTime" type="endTime_type" required="true" />
+			<field name="operator" type="operator_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+		</responseParameter>
+	</message>
+
+	<message name="resumeSafeDevice" id="2355">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="safeDeviceType" type="safeDeviceType_type"
+				required="true" />
+			<field name="safeDeviceSerialNo" type="safeDeviceSerialNo_type"
+				required="true" />
+			<field name="operator" type="operator_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+		</responseParameter>
+	</message>
+	<message name="modifySafeDeviceApplyType" id="2356">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="safeDeviceType" type="safeDeviceType_type"
+				required="true" />
+			<field name="modifyFlag" type="modifyFlag_type" required="true" />
+			<field name="safeDeviceApplyType" type="safeDeviceApplyType_type" />
+			<field name="validateTime" type="validateTime_type" />
+			<field name="invalidateTime" type="invalidateTime_type" />
+			<field name="operator" type="operator_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+		</responseParameter>
+	</message>
+
+	<message name="querySafeDeviceApplyType" id="2357">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="safeDeviceType" type="safeDeviceType_type"
+				required="true" />
+			<field name="operator" type="operator_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+
+			<field name="safeDeviceApplyType" type="safeDeviceApplyType_type" />
+		</responseParameter>
+	</message>
+
+	<message name="querySafeDeviceAllApplyType" id="2358">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="safeDeviceType" type="safeDeviceType_type"
+				required="true" />
+			<field name="operator" type="operator_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+
+			<field name="appIdArray" type="appIds_Array_type" />
+			<field name="areaIdArray" type="areaIds_Array_type" />
+			<field name="safeDeviceApplyTypeArray" type="safeDeviceApplyTypeList_Array_type" />
+		</responseParameter>
+	</message>
+
+	<message name="reportLossOfSafeDevice" id="2359">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="safeDeviceType" type="safeDeviceType_type"
+				required="true" />
+			<field name="modifyFlag" type="modifyFlag_type" required="true" />
+			<field name="lossType" type="lossType_type" required="true" />
+			<field name="safeDeviceSerialNo" type="safeDeviceSerialNo_type"
+				required="true" />
+			<field name="operator" type="operator_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+		</responseParameter>
+	</message>
+
+	<message name="queryLossOfSafeDevice" id="2360">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="safeDeviceType" type="safeDeviceType_type"
+				required="true" />
+			<field name="safeDeviceSerialNo" type="safeDeviceSerialNo_type"
+				required="true" />
+			<field name="operator" type="operator_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+
+			<field name="safeDeviceLevel" type="safeDeviceLevel_type" />
+			<field name="lossType" type="lossType_type" />
+		</responseParameter>
+	</message>
+
+	<message name="replaceSafeDevice" id="2361">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="safeDeviceType" type="safeDeviceType_type"
+				required="true" />
+			<field name="oldSerialNo" type="oldSerialNo_type" required="true" />
+			<field name="newSerialNo" type="newSerialNo_type" required="true" />
+			<field name="oldReservedPwd" type="oldReservedPwd_type"
+				required="true" />
+			<field name="newReservedPwd" type="newReservedPwd_type"
+				required="true" />
+			<field name="operator" type="operator_type" required="true" />
+			<field name="ignoreField" type="ignoreField_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+			<field name="sndaId" type="sndaId_type" />
+		</responseParameter>
+	</message>
+
+	<message name="querySndaIdBySerialNo" id="2362">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+			<field name="safeDeviceType" type="safeDeviceType_type"
+				required="true" />
+			<field name="safeDeviceSerialNo" type="safeDeviceSerialNo_type"
+				required="true" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+			<field name="sndaId" type="sndaId_type" />
+			<field name="lostFlag" type="lostFlag_type" />
+			<field name="loginFlag" type="loginFlag_type" />
+		</responseParameter>
+	</message>
+
+	<message name="clearCache" id="2371">
+		<requestParameter>
+			<field name="guid" type="guid_type" required="true" />
+			<field name="sessionId" type="sessionId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+			<field name="callTime" type="callTime_type" required="true" />
+			<field name="appSvrIp" type="appSvrIp_type" required="true" />
+			<field name="appSiteCode" type="appSiteCode_type" />
+			<field name="endpointIp" type="endpointIp_type" required="true" />
+			<field name="endpointType" type="endpointType_type" required="true" />
+			<field name="platformType" type="platformType_type" />
+			<field name="indication" type="indication_type" />
+			<field name="sndaId" type="sndaId_type" required="true" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="guid" type="guid_type" />
+			<field name="processTime" type="processTime_type" />
+			<field name="appendix" type="appendix_type" />
+		</responseParameter>
+	</message>
+
+	<message name="repairRegister" id="2403">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="password" type="password_type" required="true" />
+			<field name="salt" type="salt_type" required="true" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+		</responseParameter>
+	</message>
+
+	<message name="repairGameAccount" id="2411">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="gameAccount" type="gameAccount_type" />
+			<field name="appId" type="appId_type" required="true" />
+			<field name="areaId" type="areaId_type" required="true" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+		</responseParameter>
+	</message>
+
+	<message name="clearData" id="2457">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_type" required="true" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+		</responseParameter>
+	</message>
+
+	<message name="queryData" id="2458">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_type" required="true" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="data" type="data_type" />
+		</responseParameter>
+	</message>
+
+	<message name="appConfig" id="2459">
+		<requestParameter>
+			<field name="appId" type="appId_type" required="true" />
+			<field name="appName" type="appName_type" />
+			<field name="test" type="test_type" required="true" />
+			<field name="type" type="type_type" required="true" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="appId" type="appId_type" />
+			<field name="appName" type="appName_type" />
+			<field name="test" type="test_type" />
+		</responseParameter>
+	</message>
+
+	<message name="queryModifyPassword" id="2460">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="password" type="password_type" />
+			<field name="beforeDays" type="beforeDays_type" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="passwordArray" type="password_Array_type" />
+			<field name="createTimeArray" type="createTimes_Array_type" />
+			<field name="matchArray" type="match_Array_type" />
+		</responseParameter>
+	</message>
+
+	<message name="validateMergeAccount" id="2461">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="relatedSndaId" type="relatedSndaId_type" required="true" />
+			<field name="appIds" type="multiAppId_type" required="true" />
+			<field name="areaIds" type="multiAreaId_type" required="true" />
+			<field name="spId" type="spId_type" required="true" />
+			<field name="groupId" type="groupId_type" required="true" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="sndaIdArray" type="sndaId_Array_type" />
+			<field name="typeArray" type="type_Array_type" />
+		</responseParameter>
+	</message>
+
+	<message name="querySortedGameAccount" id="2462">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="sortType" type="sortType_type" required="true" />
+			<field name="queryCount" type="queryCount_type" required="true" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="gameAccountArray" type="gameAccounts_Array_type" />
+			<field name="createTimeArray" type="createTimes_Array_type" />
+			<field name="appIdArray" type="appIds_Array_type" />
+			<field name="areaIdArray" type="areaIds_Array_type" />
+		</responseParameter>
+	</message>
+
+	<message name="queryModifyPasswordHistory" id="2463">
+		<requestParameter>
+			<field name="sndaId" type="sndaId_type" required="true" />
+			<field name="sortType" type="sortType_type" required="true" />
+			<field name="queryCount" type="queryCount_type" required="true" />
+		</requestParameter>
+
+		<responseParameter>
+			<field name="result" type="result_type" required="true" />
+			<field name="resultMsg" type="resultMsg_type" />
+			<field name="createTimeArray" type="createTimes_Array_type" />
+			<field name="passwordArray" type="password_Array_type" />
+		</responseParameter>
+	</message>
+
+</service>
